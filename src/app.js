@@ -9,7 +9,7 @@ const httpsOptions = {
     cert: fs.readFileSync('../crt/arrsanger.com.ar.crt') // Ruta a tu archivo de certificado
 };
 
-app.get('/', (req, res) => {
+app.get('/root', (req, res) => {
     res.send('<h1>Root asd</h1>')
     console.log(httpsOptions)
 })
