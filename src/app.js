@@ -8,5 +8,5 @@ app.get('/root', (req, res) => {
 })
 
 app.listen(port, () => {
-    console.log(`Servidor escuchando puerto : ${server.address().port}`)
+    console.log(`Servidor escuchando puerto : ${port}`)
 });
