@@ -8,11 +8,7 @@ require('dotenv').config({path: env})
 
 const config = {
     port: process.env.PORT,
-    host: process.env.HOST,
-    DBport: process.env.DBPORT,
-    database: process.env.DATABASE,
-    user: process.env.USER,
-    password: process.env.PASSWORD
+    mongoUri: process.env.MONGOURI
 }
 
 export default config
