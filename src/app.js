@@ -24,7 +24,7 @@ DBconnection();
 const {port} = config
 
 //engine view
-app.use(express.static('public'));
+app.use(express.static('./public'));
 app.set('views', path.join(__dirname, 'view', 'partials'))
 app.engine('.hbs', engine({
     extname: '.hbs',
