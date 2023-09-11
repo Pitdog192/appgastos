@@ -35,7 +35,7 @@ app.engine('.hbs', engine({
 app.set('view engine', '.hbs')
 
 //routers
-app.use('/login', loginRouter)
+app.use('/', loginRouter)
 app.use('/gastos', gastosRouter)
 
 //RESPUESTA PARA RUTAS NO IMPLEMENTADAS
@@ -44,11 +44,6 @@ app.use('*', (req, res) => {
     res.send({ Error_ruta: `La ruta: '${path[0]}' no está implementada` })
 })
 
-app.use("/public", express.static(path.resolve(__dirname, 'public')));
-
-app.get("/",function (req, res) {
-    res.sendFile(__dirname + "/public/index.html")
-});
 
 app.listen(port, () => {
     console.log(`Servidor escuchando puerto : ${port}`)
