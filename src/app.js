@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended:true }))
 app.use(cors())
 
 //DB connection
-// DBconnection();
+DBconnection();
 
 //environment variables
 const {port} = config
