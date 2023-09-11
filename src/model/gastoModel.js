@@ -24,14 +24,6 @@ const GastoSchema = new Schema({
     }
 })
 
-GastoSchema.method.success = function guardado(){
-    console.log('Guardado con éxito')
-}
-
-GastoSchema.method.findGasto = function findGasto(gastoSearch){
-    return this.find({gasto : gastoSearch})
-}
-
 const GastoModel = mongoose.model('gasto', GastoSchema)
 
 export default GastoModel
