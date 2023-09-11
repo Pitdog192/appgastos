@@ -22,9 +22,9 @@ DBconnection();
 
 //environment variables
 const {port} = config
-
+console.log(config.publicPath)
 //engine view
-app.use(express.static('../public'));
+app.use(express.static(config.publicPath));
 app.set('views', path.join(__dirname, 'view', 'partials'))
 app.engine('.hbs', engine({
     extname: '.hbs',
